@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  dispy:
+    build: .
+    tty: true
+    command: "-d --daemon -c 2"
+    volumes:
+      - ./jobs:/jobs
+      - ./data:/data
+    ports:
+      - 8181
